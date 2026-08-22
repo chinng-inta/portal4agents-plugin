@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "portal4agents-plugin",
+  "version": "0.1.0",
+  "description": "Skills and a remote MCP connection for researching AI-agent news, security advisories, government documents, and Agent-Readiness data.",
+  "author": {
+    "name": "chinng-inta"
+  },
+  "homepage": "https://portal.chinng-lab-srv.dev/",
+  "repository": "https://github.com/chinng-inta/portal4agents-plugin",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "agent-skills",
+    "mcp",
+    "news",
+    "security",
+    "government",
+    "agent-readiness"
+  ]
+}
