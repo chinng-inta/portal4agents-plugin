@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "portal4agents-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Skills and a remote MCP connection for researching AI-agent news, security advisories, government documents, and Agent-Readiness data.",
   "author": {
     "name": "chinng-inta"
@@ -16,6 +16,9 @@
     "news",
     "security",
     "government",
-    "agent-readiness"
+    "agent-readiness",
+    "regulatory",
+    "citations",
+    "vendor-risk"
   ]
 }

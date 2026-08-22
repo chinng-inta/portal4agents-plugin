@@ -13,6 +13,10 @@
 - `security-watch` — CVEとセキュリティアドバイザリーを差分監視します。
 - `agent-readiness-compare` — Webサイト間で検証済みのAgent-Readiness評価を比較します。
 - `company-news-monitor` — 正規化されたエンティティとコンテンツ変更から企業を追跡します。
+- `government-policy-watch` — 米国Federal Register・EU EUR-Lex・日本の省庁文書を一次資料として追跡します。
+- `citation-pack-builder` — ライセンスと根拠段階を明示した引用パックを出力します。
+- `vendor-risk-brief` — 1つのベンダーや製品をCVE・企業ニュース・政府文書の3系統で束ねます。
+- `portal-related-research` — 1件のレコードを起点に、検証済みのエンティティを辿って関連を探索します。
 
 このプラグインは、これらのSkillをポータルの公開読み取り専用MCPエンドポイントへ接続します。
 
@@ -31,7 +35,11 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── daily-tech-brief/SKILL.md
     ├── security-watch/SKILL.md
     ├── agent-readiness-compare/SKILL.md
-    └── company-news-monitor/SKILL.md
+    ├── company-news-monitor/SKILL.md
+    ├── government-policy-watch/SKILL.md
+    ├── citation-pack-builder/SKILL.md
+    ├── vendor-risk-brief/SKILL.md
+    └── portal-related-research/SKILL.md
 ```
 
 `plugin.json` と `mcp.json` はAgent Plugins 1.0.0のスキーマを対象としています。`skills/` 直下の各ディレクトリが1つのAgent Skillであり、ディレクトリ名は `SKILL.md` のfrontmatterにある `name` と一致します。

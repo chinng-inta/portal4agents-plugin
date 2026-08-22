@@ -13,6 +13,10 @@
 - `security-watch` — 增量监控 CVE 和安全公告。
 - `agent-readiness-compare` — 比较不同网站经过验证的 Agent-Readiness 评估。
 - `company-news-monitor` — 通过规范化实体和内容变更跟踪公司动态。
+- `government-policy-watch` — 将美国 Federal Register、欧盟 EUR-Lex 和日本省厅文件作为一手资料进行追踪。
+- `citation-pack-builder` — 输出明确标注许可证和证据层级的引用包。
+- `vendor-risk-brief` — 跨 CVE、企业新闻和政府文件汇总单个供应商或产品的风险画像。
+- `portal-related-research` — 从单条记录出发，沿经过验证的实体探索关联内容。
 
 本插件将这些 Skill 连接到门户公开的只读 MCP 端点：
 
@@ -31,7 +35,11 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── daily-tech-brief/SKILL.md
     ├── security-watch/SKILL.md
     ├── agent-readiness-compare/SKILL.md
-    └── company-news-monitor/SKILL.md
+    ├── company-news-monitor/SKILL.md
+    ├── government-policy-watch/SKILL.md
+    ├── citation-pack-builder/SKILL.md
+    ├── vendor-risk-brief/SKILL.md
+    └── portal-related-research/SKILL.md
 ```
 
 `plugin.json` 和 `mcp.json` 使用 Agent Plugins 1.0.0 的 schema。`skills/` 下的每个直接子目录都是一个 Agent Skill，其目录名必须与 `SKILL.md` frontmatter中的 `name` 一致。

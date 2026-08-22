@@ -13,6 +13,10 @@ This repository is an [Agent Plugins 1.0.0](https://agent-plugins.org/) package.
 - `security-watch` — monitor CVEs and security advisories incrementally.
 - `agent-readiness-compare` — compare verified Agent-Readiness assessments across websites.
 - `company-news-monitor` — track companies through normalized entities and content changes.
+- `government-policy-watch` — track US Federal Register, EU EUR-Lex, and Japanese agency documents as primary sources.
+- `citation-pack-builder` — emit license-respecting citation packs with explicit evidence tiers.
+- `vendor-risk-brief` — assemble one vendor or product across CVEs, company news, and government documents.
+- `portal-related-research` — explore outward from one record through verified entities and keywords.
 
 The plugin connects these skills to the portal's public read-only MCP endpoint:
 
@@ -31,7 +35,11 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── daily-tech-brief/SKILL.md
     ├── security-watch/SKILL.md
     ├── agent-readiness-compare/SKILL.md
-    └── company-news-monitor/SKILL.md
+    ├── company-news-monitor/SKILL.md
+    ├── government-policy-watch/SKILL.md
+    ├── citation-pack-builder/SKILL.md
+    ├── vendor-risk-brief/SKILL.md
+    └── portal-related-research/SKILL.md
 ```
 
 `plugin.json` and `mcp.json` target the Agent Plugins 1.0.0 schemas. Each immediate child of `skills/` is an Agent Skill whose directory name matches the `name` in its `SKILL.md` frontmatter.
