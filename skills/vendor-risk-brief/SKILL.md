@@ -10,9 +10,9 @@ Use the `portal` MCP server declared by this plugin.
 This skill assembles one picture of a vendor, product, or dependency from all three portal content families. Its value is the cross-family view, so state explicitly which families produced evidence and which returned nothing.
 
 1. Fix the subject before searching. Record the vendor name, the product or package name, and any known aliases, then search each family with those terms rather than with one blended query.
-2. Gather the security family for CVE and advisory records naming the subject, retaining identifiers, affected-version evidence, severity, and the advisory's own source link.
+2. Gather the security family for CVE and advisory records naming the subject. These records carry real advisory text — impact, patches, workarounds, affected and fixed versions, upstream references — and are the only family that supplies technical evidence. Retrieve their bodies.
 3. Gather the news family for company and product records. Most external news is `link-only`, so treat these as dated pointers with metadata unless the record permits more.
-4. Gather the government family for rules, notices, and enforcement or procurement documents naming the subject, reading the body rather than the stored summary.
+4. Gather the government family for rules, notices, and enforcement or procurement documents naming the subject. These records hold no document text; report the official abstract only when `summary_source` is `official`, and otherwise cite the document by its identifiers and official URL.
 5. Produce a brief that separates confirmed impact from inference, and that gives each finding a date, a family, and a source link.
 
 ## Evidence discipline
