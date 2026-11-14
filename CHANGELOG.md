@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2026-11-15
+
+### Added
+
+- `portal-a2ui-surfaces` — fetch, render, and drive the portal's A2UI v1.0 surfaces (`application/a2ui+json`) over unauthenticated HTTPS GET: the five surface endpoints and their parameters, the three-message envelope, the data-model paths to read records from instead of walking the component tree, the event-to-GET mapping that stands in for the absent server action endpoint, `deleteSurface` before re-creating `portal-console`, and the surface-specific constraints (`link-only` summaries, Markdown headings inside `Text`, `ui_lang` falling back to `ja`, an unscanned domain answering HTTP 200, and the search rate-limit bucket).
+
+### Changed
+
+- `plugin.json` — describe the A2UI surfaces and add the `a2ui` keyword.
+- READMEs — list the new skill and note that it reads HTTPS GET endpoints rather than the MCP server, so the client needs a fetch capability.
+
 ## [0.2.1] - 2026-08-22
 
 Corrections from exercising the skills against the live portal. Several instructions in 0.2.0 assumed portal behavior that the data does not support.
@@ -38,6 +49,7 @@ Corrections from exercising the skills against the live portal. Several instruct
 - Public streamable HTTP MCP server configuration.
 - Five Agent Skills for news triage, daily technology briefs, security monitoring, Agent-Readiness comparison, and company news monitoring.
 
+[0.3.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.3.0
 [0.2.1]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.2.1
 [0.2.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.2.0
 [0.1.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.1.0

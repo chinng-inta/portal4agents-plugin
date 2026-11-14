@@ -17,12 +17,15 @@
 - `citation-pack-builder` — ライセンスと根拠段階を明示した引用パックを出力します。
 - `vendor-risk-brief` — 1つのベンダーや製品をCVE・企業ニュース・政府文書の3系統で束ねます。
 - `portal-related-research` — 1件のレコードを起点に、検証済みのエンティティを辿って関連を探索します。
+- `portal-a2ui-surfaces` — ポータルのA2UI v1.0サーフェスを取得・描画し、イベントをGETに変換して操作します。
 
 このプラグインは、これらのSkillをポータルの公開読み取り専用MCPエンドポイントへ接続します。
 
 ```text
 https://portal.chinng-lab-srv.dev/mcp
 ```
+
+`portal-a2ui-surfaces` のみ、MCPではなく認証不要のHTTPS GET（`application/a2ui+json`）を使用するため、クライアント側のフェッチ機能が必要です。
 
 ## パッケージ構成
 
@@ -39,7 +42,8 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── government-policy-watch/SKILL.md
     ├── citation-pack-builder/SKILL.md
     ├── vendor-risk-brief/SKILL.md
-    └── portal-related-research/SKILL.md
+    ├── portal-related-research/SKILL.md
+    └── portal-a2ui-surfaces/SKILL.md
 ```
 
 `plugin.json` と `mcp.json` はAgent Plugins 1.0.0のスキーマを対象としています。`skills/` 直下の各ディレクトリが1つのAgent Skillであり、ディレクトリ名は `SKILL.md` のfrontmatterにある `name` と一致します。

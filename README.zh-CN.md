@@ -17,12 +17,15 @@
 - `citation-pack-builder` — 输出明确标注许可证和证据层级的引用包。
 - `vendor-risk-brief` — 跨 CVE、企业新闻和政府文件汇总单个供应商或产品的风险画像。
 - `portal-related-research` — 从单条记录出发，沿经过验证的实体探索关联内容。
+- `portal-a2ui-surfaces` — 获取、渲染并驱动门户的 A2UI v1.0 界面，并把界面事件转换为 GET 请求。
 
 本插件将这些 Skill 连接到门户公开的只读 MCP 端点：
 
 ```text
 https://portal.chinng-lab-srv.dev/mcp
 ```
+
+只有 `portal-a2ui-surfaces` 例外：它读取免认证的 HTTPS GET 端点（`application/a2ui+json`），而不是 MCP 服务器，因此需要客户端具备抓取能力。
 
 ## 软件包结构
 
@@ -39,7 +42,8 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── government-policy-watch/SKILL.md
     ├── citation-pack-builder/SKILL.md
     ├── vendor-risk-brief/SKILL.md
-    └── portal-related-research/SKILL.md
+    ├── portal-related-research/SKILL.md
+    └── portal-a2ui-surfaces/SKILL.md
 ```
 
 `plugin.json` 和 `mcp.json` 使用 Agent Plugins 1.0.0 的 schema。`skills/` 下的每个直接子目录都是一个 Agent Skill，其目录名必须与 `SKILL.md` frontmatter中的 `name` 一致。
