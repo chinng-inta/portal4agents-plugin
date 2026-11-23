@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2026-11-23
+
+### Added
+
+- `personalized-topics` — pick topics that match an interest profile the user declared. The skill ships instructions only: the agent keeps `profile.yaml` and the seen list in its own local storage, runs one portal search per interest, and does scoring (interest weights, title bonus, linear recency bonus), same-story folding (title character-set Jaccard plus entity overlap as a candidate signal), and seen-tracking on the client side. The portal receives ordinary search queries and stores no profile or history.
+
 ## [0.3.0] - 2026-11-15
 
 ### Added
@@ -49,6 +55,7 @@ Corrections from exercising the skills against the live portal. Several instruct
 - Public streamable HTTP MCP server configuration.
 - Five Agent Skills for news triage, daily technology briefs, security monitoring, Agent-Readiness comparison, and company news monitoring.
 
+[0.4.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.4.0
 [0.3.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.3.0
 [0.2.1]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.2.1
 [0.2.0]: https://github.com/chinng-inta/portal4agents-plugin/releases/tag/v0.2.0

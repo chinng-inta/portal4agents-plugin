@@ -18,6 +18,7 @@ This repository is an [Agent Plugins 1.0.0](https://agent-plugins.org/) package.
 - `vendor-risk-brief` — assemble one vendor or product across CVEs, company news, and government documents.
 - `portal-related-research` — explore outward from one record through verified entities and keywords.
 - `portal-a2ui-surfaces` — fetch, render, and drive the portal's A2UI v1.0 surfaces, resolving their events to GET requests.
+- `personalized-topics` — rank and deduplicate topics against an interest profile the user declared, entirely on the client side.
 
 The plugin connects these skills to the portal's public read-only MCP endpoint:
 
@@ -43,7 +44,8 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── citation-pack-builder/SKILL.md
     ├── vendor-risk-brief/SKILL.md
     ├── portal-related-research/SKILL.md
-    └── portal-a2ui-surfaces/SKILL.md
+    ├── portal-a2ui-surfaces/SKILL.md
+    └── personalized-topics/SKILL.md
 ```
 
 `plugin.json` and `mcp.json` target the Agent Plugins 1.0.0 schemas. Each immediate child of `skills/` is an Agent Skill whose directory name matches the `name` in its `SKILL.md` frontmatter.

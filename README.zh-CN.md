@@ -18,6 +18,7 @@
 - `vendor-risk-brief` — 跨 CVE、企业新闻和政府文件汇总单个供应商或产品的风险画像。
 - `portal-related-research` — 从单条记录出发，沿经过验证的实体探索关联内容。
 - `portal-a2ui-surfaces` — 获取、渲染并驱动门户的 A2UI v1.0 界面，并把界面事件转换为 GET 请求。
+- `personalized-topics` — 依据用户声明的兴趣档案，完全在客户端对主题进行排序与去重。
 
 本插件将这些 Skill 连接到门户公开的只读 MCP 端点：
 
@@ -43,7 +44,8 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── citation-pack-builder/SKILL.md
     ├── vendor-risk-brief/SKILL.md
     ├── portal-related-research/SKILL.md
-    └── portal-a2ui-surfaces/SKILL.md
+    ├── portal-a2ui-surfaces/SKILL.md
+    └── personalized-topics/SKILL.md
 ```
 
 `plugin.json` 和 `mcp.json` 使用 Agent Plugins 1.0.0 的 schema。`skills/` 下的每个直接子目录都是一个 Agent Skill，其目录名必须与 `SKILL.md` frontmatter中的 `name` 一致。

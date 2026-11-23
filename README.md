@@ -18,6 +18,7 @@
 - `vendor-risk-brief` — 1つのベンダーや製品をCVE・企業ニュース・政府文書の3系統で束ねます。
 - `portal-related-research` — 1件のレコードを起点に、検証済みのエンティティを辿って関連を探索します。
 - `portal-a2ui-surfaces` — ポータルのA2UI v1.0サーフェスを取得・描画し、イベントをGETに変換して操作します。
+- `personalized-topics` — 利用者が宣言した関心プロファイルに基づき、クライアント側だけでトピックを順位付け・名寄せします。
 
 このプラグインは、これらのSkillをポータルの公開読み取り専用MCPエンドポイントへ接続します。
 
@@ -43,7 +44,8 @@ https://portal.chinng-lab-srv.dev/mcp
     ├── citation-pack-builder/SKILL.md
     ├── vendor-risk-brief/SKILL.md
     ├── portal-related-research/SKILL.md
-    └── portal-a2ui-surfaces/SKILL.md
+    ├── portal-a2ui-surfaces/SKILL.md
+    └── personalized-topics/SKILL.md
 ```
 
 `plugin.json` と `mcp.json` はAgent Plugins 1.0.0のスキーマを対象としています。`skills/` 直下の各ディレクトリが1つのAgent Skillであり、ディレクトリ名は `SKILL.md` のfrontmatterにある `name` と一致します。
